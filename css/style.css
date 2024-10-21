@@ -10,6 +10,7 @@ body {
     color: #333;
     line-height: 1.6;
     background-color: #f4f4f4;
+    padding-top: 70px; /* Adjust this value based on the height of your nav */
 }
 
 /* Container */
@@ -62,6 +63,15 @@ header {
     transition: background-color 0.3s;
 }
 
+.nav-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
 .button:hover {
     background-color: #0056b3;
 }
@@ -69,12 +79,42 @@ header {
 /* Navigation */
 nav {
     background-color: #555;
-    padding: 15px 0;
+    padding: 10px 0;
+    position: fixed; /* Make the nav bar fixed */
+    top: 0; /* Stick it to the top of the screen */
+    width: 100%; /* Ensure it spans the full width of the screen */
+    z-index: 1000; /* Make sure it stays on top of other content */
 }
 
+/* Flexbox layout for nav container */
+.nav-container {
+    display: flex;
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Align contents vertically */
+    position: relative; /* Needed for absolute positioning */
+}
+
+/* Left-aligned button */
+.nav-button-left {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    left: 0; /* Position it at the far left */
+}
+
+.nav-button-left:hover {
+    background-color: #0056b3;
+}
+
+/* Center-aligned menu */
 .nav-menu {
     display: flex;
     justify-content: center;
+    list-style: none;
+    padding: 0; /* Reduce padding around the nav items */
 }
 
 .nav-menu li {
@@ -111,6 +151,15 @@ h2 {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    padding-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.about-section-large {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 40px;
     font-size: 1.1rem;
 }
 
@@ -156,6 +205,11 @@ h2 {
 }
 
 /* Contact Section */
+
+.page-bottom {
+    background-color: lightblue;
+}
+
 .contact-section p {
     text-align: center;
     font-size: 1.1rem;
@@ -180,6 +234,13 @@ h2 {
 
 .contact-info a:hover {
     text-decoration: underline;
+}
+
+.contact-icon {
+    width: 40px; /* Set the icon size */
+    height: 40px;
+    margin-right: 8px; /* Add space between icon and text */
+    vertical-align: middle; /* Align icons with the text */
 }
 
 /* Footer */

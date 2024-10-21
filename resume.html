@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Your Name - Portfolio</title>
+    <title>Kyle Ambrecht - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <nav>
+        <div class="container nav-container">
+            <a href="#contact" class="button nav-button-left">Get in Touch</a>
+            <ul class="nav-menu container">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Experience</a></li>
+                <li><a href="#resume.html">Resume</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header>
         <div class="container header-container">
             <div class="profile-image">
@@ -22,32 +34,25 @@
         </div>
     </header>
 
-    <nav>
-        <ul class="nav-menu container">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav>
-
     <section id="resume" class="container about-section">
         <h2>Resume</h2>
         <p>I'm a passionate software engineer with expertise in Python, JavaScript, and cloud technologies. I specialize in building scalable web applications and have a deep interest in cloud infrastructure (AWS, Azure), automation (Terraform, CI/CD), and cybersecurity.</p>
     </section>
 
-    <section id="contact" class="container contact-section">
-        <h2>Contact</h2>
-        <p>If you're interested in collaborating or have any questions, feel free to reach out via email or connect with me on LinkedIn or GitHub.</p>
-        <ul class="contact-info">
-            <li>Email: <a href="mailto:kyle.ambrecht@yahoo.com">Kyle.Ambrecht@Yahoo.com</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/kyle-ambrecht-b428252b3" target="_blank">LinkedIn</a></li>
-            <li>GitHub: <a href="https://github.com/KSA01" target="_blank">GitHub</a></li>
-        </ul>
-    </section>
+    <div class="page-bottom">
+        <section id="contact" class="container contact-section">
+            <h2>Contact</h2>
+            <p>If you're interested in collaborating or have any questions, feel free to reach out via email or connect with me on LinkedIn or GitHub.</p>
+            <ul class="contact-info">
+                <li><a href="mailto:kyle.ambrecht@yahoo.com"><img src="img/email-icon.png" alt="Email :" class="contact-icon">Kyle.Ambrecht@Yahoo.com</a></li>
+                <li><a href="https://www.linkedin.com/in/kyle-ambrecht-b428252b3" target="_blank"><img src="img/linkedin-icon.jpg" alt="LinkedIn :" class="contact-icon">LinkedIn</a></li>
+                <li><a href="https://github.com/KSA01" target="_blank"><img src="img/github-icon.png" alt="GitHub :" class="contact-icon">GitHub</a></li>
+            </ul>
+        </section>
+    </div>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Kyle Ambrecht. All rights reserved.</p>
     </footer>
 </body>
 </html>
