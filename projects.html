@@ -18,13 +18,19 @@
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
+            <div class="nav-icons">
+                <a href="mailto:kyle.ambrecht@yahoo.com"><img src="img/email-w-icon.png" alt="Email" class="nav-icon"></a>
+                <a href="https://www.linkedin.com/in/kyle-ambrecht-b428252b3" target="_blank"><img src="img/linkedin-w-icon.png" alt="LinkedIn" class="nav-icon"></a>
+                <a href="https://github.com/KSA01" target="_blank"><img src="img/github-w-icon.png" alt="GitHub" class="nav-icon"></a>
+                <a href="https://www.instagram.com/_kyle_._ambrecht_/" target="_blank"><img src="img/instagram-w-icon.png" alt="Instagram" class="nav-icon"></a>
+            </div>
         </div>
     </nav>
 
     <header>
         <div class="container header-container">
             <div class="profile-image">
-                <img src="img/profile.jpg" alt="Your Image">
+                <img src="img/profile.jpg" alt="My Image">
             </div>
             <div class="intro">
                 <h1>Kyle Ambrecht</h1>
@@ -40,6 +46,7 @@
             <div class="project-card">
                 <h1>Eniac</h1>
                 <h3>01/01/2024 - 06/01/2024</h3>
+                <img class="project-img" src="img/eniac2.jpg" alt="Eniac Image 1" style="width: 10%; cursor: pointer;">
                 <h3>Associated with time as DAST Consulting Services</h3>
                 <p>
                     Assisted on further developing features to a SMS based prompt service app for students to chat with using emojis to describe how they feel to encourage students or users to continue interacting with the platform by gaining a streak and earning 
@@ -52,6 +59,7 @@
             <div class="project-card">
                 <h1>Hangman Game</h1>
                 <h3>01/2024 - 4/2024</h3>
+                <img class="project-img" src="img/hangman1.jpg" alt="Hangman1 Image" style="width: 10%; cursor: pointer;">
                 <h3>Associated with Jessup University</h3>
                 <p>
                     Created a fully interactive game of hangman using Python and its libraries such as pygame, random, and numpy. I implemented a fully functioning word difficulty analyzer found online to classify words to easy, medium, or hard. 
@@ -64,6 +72,7 @@
             <div class="project-card">
                 <h1>3D Tetris Game</h1>
                 <h3>9/2023 - 11/2023</h3>
+                <img class="project-img" src="img/3dtetris.jpg" alt="3DTetris Image" style="width: 5%; cursor: pointer;">
                 <h3>Associated with Jessup University</h3>
                 <p>
                     Created a 3D version of the game Tetris using Python, OpenGL, and Graphics Card Language. Uses the arrow keys to move the blocks on the screen and the wasd keys to rotate the objects on the screen. It will randomly choose an object 
@@ -83,6 +92,11 @@
                 <p>Skills: HTML · JavaScript · Cascading Style Sheets (CSS) · Project Management · Teamwork</p>
                 <a href="https://github.com/squal1/text-adventure" target="_blank">View Project</a>
             </div>
+
+            <div id="img-modal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modal-img">
+            </div>
         </div>
     </section>
     
@@ -95,11 +109,42 @@
                 <li><a href="https://www.linkedin.com/in/kyle-ambrecht-b428252b3" target="_blank"><img src="img/linkedin-icon.png" alt="LinkedIn :" class="contact-icon">LinkedIn</a></li>
                 <li><a href="https://github.com/KSA01" target="_blank"><img src="img/github-icon.png" alt="GitHub :" class="contact-icon">GitHub</a></li>
             </ul>
+            <h2>&nbsp</h2>
         </section>
     </div>
 
     <footer>
         <p>&copy; 2024 Kyle Ambrecht. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        var modal = document.getElementById("img-modal");
+        var modalImg = document.getElementById("modal-img");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // Get all images with class 'project-img'
+        var images = document.getElementsByClassName("project-img");
+
+        // Loop through each image and add the click event listener
+        for (let i = 0; i < images.length; i++) {
+            images[i].onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+
+        // When the close button is clicked, close the modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Also close the modal if the user clicks anywhere outside the image
+        modal.onclick = function(event) {
+            if (event.target !== modalImg) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
