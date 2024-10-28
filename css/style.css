@@ -345,7 +345,7 @@ footer {
 .download-cv {
     position: absolute;
     justify-content: center;
-    margin-left: 55%;
+    margin-left: 1280px;
     margin-bottom: 20px;
 }
 
@@ -402,7 +402,8 @@ footer {
 
 /* Experience details */
 .exp-details {
-    max-width: 600px;
+    min-width: 500px;
+    max-width: 1000px;
     margin-left: 160px;
 }
 
